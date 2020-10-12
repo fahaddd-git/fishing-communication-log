@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<div class="container">
+
+    <section class="jumbotron">
+        <h1>Email Dashboard</h1>
+
+    </section>
+
+
+    <form method="post">
+        <div class="row">
+            <div class="col">
+                <section class="card">
+                    <h2 class="card-header">Email Address</h2>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Enter Recipient Email Address:</label>
+                            <input type="text" th:field="${user.email}" class="form-control"/>
+                        </div>
+                        <p class="error" th:errors="${user.email}"></p>
+
+                    </div>
+                </section>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <section class="card">
+                        <h2 class="card-header">Name</h2>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Enter Recipient Name:</label>
+                                <input type="text" th:field="${user.name}" class="form-control"/>
+                            </div>
+                            <p class="error" th:errors="${user.name}"></p>
+
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <section class="card">
+                            <h2 class="card-header">UserName</h2>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Enter Recipient UserName:</label>
+                                    <input type="text" th:field="${user.username}" class="form-control"/>
+                                </div>
+                                <p class="error" th:errors="${user.username}"></p>
+                        <input type="submit" value="Send Email Template" class="btn btn-primary"/>
+                                <p th:text="${status}"></p>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

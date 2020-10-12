@@ -29,9 +29,6 @@ public class WebHook extends HttpServlet {
             message="Please contact us at (xxx)xxx-xxxx or respond with either 1 or 2";
         }
 
-
-
-
         Body twimlbody = new Body
                 .Builder(message)
                 .build();
