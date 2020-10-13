@@ -1,15 +1,15 @@
-package com.example.websocket;
+package com.example.websocket.models;
 
-public class sendMessage {
+public class SendTextMessage {
     private String messageText;
     private String destinationPhoneNumber;
 
 
-    public sendMessage(String messageText, String destinationPhoneNumber) {
+    public SendTextMessage(String messageText, String destinationPhoneNumber) {
         this.messageText = messageText;
         this.destinationPhoneNumber = destinationPhoneNumber;
     }
-    public sendMessage(){}
+    public SendTextMessage(){}
 
     public String getMessageText() {
         return messageText;

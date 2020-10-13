@@ -2,6 +2,7 @@ package com.example.websocket;
 
 import com.example.websocket.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -30,10 +31,12 @@ public class EmailService {
 
             String process = templateEngine.process("welcome", context);
             javax.mail.internet.MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage);
-            helper.setSubject("Welcome " + user.getName());
+            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+            helper.setSubject("Hello " + user.getName());
             helper.setText(process, true);
             helper.setTo(user.getEmail());
+            ClassPathResource attachmentFile= new ClassPathResource("static/fishingWaiver.pdf");
+            helper.addAttachment("test.pdf", attachmentFile);
             javaMailSender.send(mimeMessage);
             return "Sent";
         }

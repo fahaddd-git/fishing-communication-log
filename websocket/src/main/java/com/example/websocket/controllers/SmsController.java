@@ -1,7 +1,7 @@
 package com.example.websocket.controllers;
 
 
-import com.example.websocket.sendMessage;
+import com.example.websocket.models.SendTextMessage;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping
-public class PageController {
+public class SmsController {
 
     @Value("${phoneNumber}")
     private String phoneNumber;
@@ -30,17 +30,17 @@ public class PageController {
     @GetMapping
     public String index(Model model) {
         model.addAttribute("userNumber", phoneNumber);
-        model.addAttribute("message", new sendMessage());
+        model.addAttribute("message", new SendTextMessage());
         return "index";
     }
 
 
     @PostMapping
-    public String processForm(@ModelAttribute sendMessage sendMessage){
+    public String processForm(@ModelAttribute SendTextMessage SendTextMessage){
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-        Message message = Message.creator(new PhoneNumber(sendMessage.getDestinationPhoneNumber()),
+        Message message = Message.creator(new PhoneNumber(SendTextMessage.getDestinationPhoneNumber()),
                 new PhoneNumber(phoneNumber),
-                sendMessage.getMessageText()).create();
+                SendTextMessage.getMessageText()).create();
 
         System.out.println("Sent message w/ sid: " +message.getSid());
         return "redirect:";
