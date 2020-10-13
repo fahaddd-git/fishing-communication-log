@@ -13,7 +13,7 @@ An application that facilitates booking and communication between fishing guides
 
 -[x] functionality to include email attachment for client waiver
 
--[ ] add page navigation
+-[x] add page navigation
 
 -[ ] create booking system
 

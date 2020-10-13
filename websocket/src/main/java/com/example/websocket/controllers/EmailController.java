@@ -25,6 +25,7 @@ public class EmailController {
     @GetMapping
     public String index(Model model) {
         model.addAttribute("user", new User());
+
         return "email";
     }
 
