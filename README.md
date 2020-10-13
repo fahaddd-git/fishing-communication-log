@@ -1,8 +1,9 @@
 # fishing-communication-log
-##Overview
+## Overview
 
 An application that facilitates booking and communication between fishing guides and clients.
 
+## Todo & Completed
 
 -[x] ability to send text messages to confirm appointments
 
@@ -10,13 +11,17 @@ An application that facilitates booking and communication between fishing guides
 
 -[x] automatically generate personalized email template to send to users
 
--[x] add email waiver attachment
+-[x] functionality to include email attachment for client waiver
 
--[ ] add navigation
+-[ ] add page navigation
 
 -[ ] create booking system
 
+-[ ] make a better looking email template with inline pictures
+
 -[ ] create splash page
+
+-[ ] add persistent data storage layer
 
 
 ## Technologies
