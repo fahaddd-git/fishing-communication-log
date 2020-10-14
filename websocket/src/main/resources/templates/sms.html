@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+
+<body>
+
+<div class="container">
+
+    <section class="jumbotron">
+        <h1>Communication Dashboard</h1>
+        Sending from <span th:text="${userNumber}">XXXXX</span>
+    </section>
+
+
+<form method="post">
+    <div class="row">
+        <div class="col">
+            <section class="card">
+                <h2 class="card-header">Phone number</h2>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Enter Recipient Phone Number:</label>
+                      <input type="text" th:field="${message.destinationPhoneNumber}" class="form-control"/>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col">
+            <section class="card">
+                <h2 class="card-header">Message</h2>
+                <div class="card-body">
+                    <div class="form-group">
+
+                        <label>Enter your Message:</label>
+                 <textarea th:field="${message.messageText}" class="form-control" ></textarea>
+                    </div>
+                    <input type="submit" value="Send Message" class="btn btn-primary"/>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</form>
+
+
+
+</body>
+
+</html>

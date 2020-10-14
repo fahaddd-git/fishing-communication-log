@@ -7,13 +7,15 @@ An application that facilitates booking and communication between fishing guides
 
 -[x] ability to send text messages to confirm appointments
 
--[x] functionality to reply to automatically reply to text messages sent by users
+-[x] functionality to automatically reply to text messages sent by users
 
--[x] automatically generate personalized email template to send to users
+-[x] automatically generate and send personalized email template to send to users
 
 -[x] functionality to include email attachment for client waiver
 
--[x] add page navigation
+-[x] add page navigation links
+
+-[x] reorder structure of pages to facilitate additions
 
 -[ ] create booking system
 

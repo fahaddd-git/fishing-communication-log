@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping
+@RequestMapping("sms")
 public class SmsController {
 
     @Value("${phoneNumber}")
@@ -32,7 +32,7 @@ public class SmsController {
         model.addAttribute("userNumber", phoneNumber);
         model.addAttribute("message", new SendTextMessage());
 
-        return "index";
+        return "sms";
     }
 
 
