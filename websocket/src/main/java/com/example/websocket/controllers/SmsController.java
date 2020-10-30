@@ -37,13 +37,13 @@ public class SmsController {
 
 
     @PostMapping
-    public String processForm(@ModelAttribute SendTextMessage SendTextMessage){
+    public String processForm(@ModelAttribute SendTextMessage SendTextMessage, Model model){
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Message message = Message.creator(new PhoneNumber(SendTextMessage.getDestinationPhoneNumber()),
                 new PhoneNumber(phoneNumber),
                 SendTextMessage.getMessageText()).create();
 
         System.out.println("Sent message w/ sid: " +message.getSid());
-        return "redirect:";
+        return "redirect:sms";
     }
 }

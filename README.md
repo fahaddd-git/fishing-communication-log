@@ -17,7 +17,7 @@ An application that facilitates booking and communication between fishing guides
 
 -[x] reorder structure of pages to facilitate additions
 
--[ ] create booking system
+-[ ] create reservation system
 
 -[ ] make a better looking email template with inline pictures
 
