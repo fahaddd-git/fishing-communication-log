@@ -8,10 +8,12 @@
 
 <div class="container">
 
-    <section class="jumbotron">
-        <h1>Communication Dashboard</h1>
-        Sending from <span th:text="${userNumber}">XXXXX</span>
+    <section th:replace="fragments :: sectionHeader">
+
+
+
     </section>
+    Sending from <span th:text="${userNumber}">XXXXX</span>
 
 
 <form method="post">

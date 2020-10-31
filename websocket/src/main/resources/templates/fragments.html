@@ -12,6 +12,8 @@
 </head>
 
 
+
+
 <header th:fragment="header">
 
 
@@ -21,3 +23,9 @@
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
     </ul>
 </header>
+
+
+
+<section class="jumbotron" th:fragment="sectionHeader">
+    <h1 th:text="${title}">Title</h1>
+</section>

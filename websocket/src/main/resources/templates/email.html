@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="fragments :: head">
+<head th:replace="fragments :: head"></head>
 
-<header th:replace="fragments :: header"></header>
+    <header th:replace="fragments :: header"></header>
 
 <body>
 
 <div class="container">
 
-    <section class="jumbotron">
-        <h1>Email Dashboard</h1>
-
+    <section th:replace="fragments :: sectionHeader">
     </section>
 
 

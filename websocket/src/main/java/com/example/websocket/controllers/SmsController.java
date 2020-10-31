@@ -31,6 +31,7 @@ public class SmsController {
     public String index(Model model) {
         model.addAttribute("userNumber", phoneNumber);
         model.addAttribute("message", new SendTextMessage());
+        model.addAttribute("title", "SMS Dashboard");
 
         return "sms";
     }

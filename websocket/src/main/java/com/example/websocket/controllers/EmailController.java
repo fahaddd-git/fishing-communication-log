@@ -25,6 +25,7 @@ public class EmailController {
     @GetMapping
     public String index(Model model) {
         model.addAttribute("user", new User());
+        model.addAttribute("title", "Email Dashboard");
 
         return "email";
     }
@@ -39,6 +40,7 @@ public class EmailController {
         } else{
             emailService.sendMail(user);
             model.addAttribute("status", "success!");
+            model.addAttribute("title", "Email Dashboard");
             System.out.println("Email sent!");
             return "email";
         }
