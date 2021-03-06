@@ -8,12 +8,15 @@
 
 <div class="container">
 
-    <section th:replace="fragments :: sectionHeader">
+    <section th:include="fragments :: sectionHeader">
+
 
 
 
     </section>
     Sending from <span th:text="${userNumber}">XXXXX</span>
+
+
 
 
 <form method="post">
